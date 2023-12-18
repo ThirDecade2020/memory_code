@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Code Snippet - Memory Code</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'Source Code Pro', monospace;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Memory Code</h1>
+    </header>
+    
+    <main>
+        <h2>Enter Your Code Snippet</h2>
+        <p>Type your code snippet below, then press 'Build Typing Memory' to begin training.</p>
+        
+        <form action="{{ url_for('snippet_input') }}" method="post">
+            <label for="code_snippet">Code Snippet:</label>
+            <textarea id="code_snippet" name="code_snippet" rows="10" cols="50" placeholder="Type code snippet here..." required></textarea>
+            <br>
+            <input type="submit" value="Build Typing Memory">
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Memory Code. All rights reserved.</p>
+    </footer>
+    
+    <!-- Add link to JavaScript file here if needed -->
+</body>
+</html>
+
