@@ -88,4 +88,5 @@ def continue_practice():
     return render_template('continue.html')
 
 if __name__ == '__main__':
+    db.create_all()  # Initialize the database
     app.run(debug=True)
