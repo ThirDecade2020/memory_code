@@ -1,7 +1,20 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-app = Flask(__name__)
+from flask_sqlalchemy import SQLAlchemy
 
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///memory_code.db'
 app.secret_key = 'Qazxswedcvfrtgbnhy'
+db = SQLAlchemy(app)
+
+# Define your models here, for example:
+class Snippet(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.Text, nullable=False)
+    # Add other fields or models as needed
+
+@app.before_first_request
+def create_tables():
+    db.create_all()
 
 @app.route('/')
 def index():
@@ -10,8 +23,13 @@ def index():
 @app.route('/snippet_input', methods=['GET', 'POST'])
 def snippet_input():
     if request.method == 'POST':
-        snippet = request.form['code_snippet']
-        session['code_snippet'] = snippet  # Save snippet to session
+        snippet_content = request.form['code_snippet']
+        new_snippet = Snippet(content=snippet_content)
+        db.session.add(new_snippet)
+        db.session.commit()
+
+        # Save the ID of the new snippet in the session to use later
+        session['snippet_id'] = new_snippet.id
         return redirect(url_for('practice'))
     return render_template('snippet_input.html')
 
