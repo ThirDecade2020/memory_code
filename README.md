@@ -4,11 +4,11 @@ Memory Code is a web application designed to address common challenges faced by 
 
 ## Problems Solved
 
-1. **Problem:** Software developers have difficulty writing code from memory and need a tool to help them train on code snippets.
-   - **Solution:** Memory Code strengthens the memory of code snippet syntax through repetitive training and challenges.
+1. **Problem 1:** Software developers have difficulty writing code from memory and need a tool to help them train on code snippets.
+   - **Solution 1:** Memory Code strengthens the memory of code snippet syntax through repetitive training and challenges.
 
-2. **Problem:** Software developers struggle with writing code on the fly from memory during technical interviews.
-   - **Solution:** Memory Code provides a platform for training on code snippets, helping developers strengthen their memory and perform better in technical interviews.
+2. **Problem 2:** Software developers struggle with writing code on the fly from memory during technical interviews.
+   - **Solution 2:** Memory Code provides a platform for training on code snippets, helping developers strengthen their memory and perform better in technical interviews.
 
 ## Stack
 
