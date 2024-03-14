@@ -1,26 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
-?
+*,
+html {
+	font-family: "Source Code Pro", monospace;
+	font-size: 62.5%;
+}
 body {
 	margin: 0;
 	padding: 0;
 }
 
-header h1 {
+header {
 	background-color: #f0f0f0;
-	padding: 20px;
+	padding: 40px 20px;
 	text-align: center;
-	font-size: 1.2rem;
+}
+
+h1 {
+	font-size: 3.2rem;
+	font-weight: 600;
+}
+
+p {
+	font-size: 1.6rem;
+	margin-top: 20px;
 }
 
 main {
 	padding: 20px;
-	text-align: center;
-}
-
-footer {
-	background-color: #f0f0f0;
-	padding: 10px 0;
 	text-align: center;
 }
 
@@ -30,9 +37,18 @@ a.button {
 	background-color: #007bff;
 	color: #fff;
 	text-decoration: none;
+	border: 1px solid #007bff;
 	border-radius: 5px;
+	font-size: 1.6rem;
+	margin-top: 20px;
 }
 
 a.button:hover {
 	background-color: #0056b3;
+}
+
+footer {
+	background-color: #f0f0f0;
+	padding: 15px 0;
+	text-align: center;
 }
