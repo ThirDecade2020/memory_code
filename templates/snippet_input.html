@@ -18,13 +18,13 @@ body {
     
     <main>
         <h2>Enter Your Code Snippet</h2>
-        <p>Type your code snippet below, then press 'Build Typing Memory' to begin training.</p>
+        <p>Type your code snippet below, then press 'Strengthen Syntax Memory' to begin training.</p>
         
         <form action="{{ url_for('snippet_input') }}" method="post">
             <label for="code_snippet">Code Snippet:</label>
             <textarea id="code_snippet" name="code_snippet" rows="10" cols="50" placeholder="Type code snippet here..." required></textarea>
             <br>
-            <input type="submit" value="Build Typing Memory">
+            <input type="submit" value="Strengthen Syntax Memory">
         </form>
     </main>
     
